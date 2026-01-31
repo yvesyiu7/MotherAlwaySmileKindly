@@ -19,7 +19,7 @@ public class CardCsvData
     {
         CardId = 0;
         CardType = "";
-        Rarity = "Common";
+        Rarity = "CommonCard";
         ImageId = "";
         CardTitleId = "";
         Description = "";

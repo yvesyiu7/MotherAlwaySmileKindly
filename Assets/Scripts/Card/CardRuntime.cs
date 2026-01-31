@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class CardRuntime : MonoBehaviour
 {
     public int CardId;
-    private CardCsvData _data;
+    private CardCsvData _cardCsvData;
     public CardStatus CardStatus;
 
     // TextMeshPro components for card text (assuming world-space TextMeshPro)
@@ -58,15 +58,17 @@ public class CardRuntime : MonoBehaviour
     // Base method to set card data (override in subclasses)
     public virtual void InitializeCard(CardCsvData cardCsvData)
     {
-        _data = cardCsvData;
+        _cardCsvData = cardCsvData;
         CardStatus.Init(cardCsvData);
         RefreshUI();
     }
 
     public virtual void RefreshUI()
     {
-        titleText.text = _data.CardTitleId;
+        titleText.text = _cardCsvData.CardTitleId;
         hpText.text = CardStatus.GetCurrentHP() + "/" + CardStatus.GetMaxHP();
+        cardImage.sprite = SpriteManager.Instance.GetCardImage(_cardCsvData.ImageId);
+        cardBorder.sprite = SpriteManager.Instance.GetCardBorder(_cardCsvData.Rarity);
     }
 
     // Example base update (override if needed)
