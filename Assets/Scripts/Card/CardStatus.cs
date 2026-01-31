@@ -93,4 +93,21 @@ public class CardStatus
         attack = newAttack;
         OnAttackChanged?.Invoke(attack);
     }
+
+    public void ReceiveMessage(CardMessage cardMessage)
+    {
+        switch (cardMessage.type)
+        {
+            case MessageType.Damage:
+                TakeDamage(cardMessage.value);
+                break;
+            case MessageType.Destroy:
+                break;
+            case MessageType.Heal:
+                Heal(cardMessage.value);
+                break;
+            default:
+                break;
+        }
+    }
 }

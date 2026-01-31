@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class FoodRuntime : MonoBehaviour
+public class FoodRuntime : CardRuntime
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void SendCardMessage(CardRuntime target)
     {
-        
-    }
+        Debug.Log("SendCardMessage: " + target.name);
+        target.ReceiveMessage(new CardMessage(MessageType.Heal, CardStatus.GetAttack()));
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Add your damage/animation logic here
     }
 }

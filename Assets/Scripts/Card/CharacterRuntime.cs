@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class CharacterRuntime : MonoBehaviour
+public class CharacterRuntime : CardRuntime
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    protected override void SendCardMessage(CardRuntime target)
     {
-        
+        Debug.Log("Attacking: " + target.name);
+        target.ReceiveMessage(new CardMessage(MessageType.Damage, CardStatus.GetAttack()));
+
+        // Add your damage/animation logic here
     }
 }
