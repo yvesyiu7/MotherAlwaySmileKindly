@@ -11,6 +11,8 @@ public class CardCsvData
     public string CardTitleId { get; set; }      // localization key (often int for I2Loc / Unity Localization)
     public string Description { get; set; }    // localization key for description
     public string SourceDescription { get; set; }    // localization key for description
+    public int Hp { get; set; }    // localization key for description
+    public int Attack { get; set; }    // localization key for description
 
     // Optional: constructor for easier debugging / creation in code
     public CardCsvData()
@@ -22,6 +24,7 @@ public class CardCsvData
         CardTitleId = "";
         Description = "";
         SourceDescription = "";
+
     }
 
     // Helpful for debugging

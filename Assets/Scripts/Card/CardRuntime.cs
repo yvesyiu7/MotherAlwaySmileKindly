@@ -7,6 +7,10 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(MovementController))]
 public class CardRuntime : MonoBehaviour
 {
+    public int CardId;
+    private CardCsvData _data;
+    public CardStatus CardStatus;
+
     // TextMeshPro components for card text (assuming world-space TextMeshPro)
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI hpText;
@@ -42,14 +46,25 @@ public class CardRuntime : MonoBehaviour
         if (visualModel == null) Debug.LogWarning("Visual Model Transform not assigned.");
     }
 
-    // Base method to set card data (override in subclasses)
-    public virtual void InitializeCard(string title, string description, int hp, Sprite imageSprite, Sprite borderSprite, Sprite typeIconSprite)
+    protected virtual void Start()
     {
-        if (titleText != null) titleText.text = title;
-        if (hpText != null) hpText.text = hp.ToString();
-        if (cardImage != null) cardImage.sprite = imageSprite;
-        if (cardBorder != null) cardBorder.sprite = borderSprite;
-        if (cardTypeIcon != null) cardTypeIcon.sprite = typeIconSprite;
+        if (CardId != 0) {
+            InitializeCard(CardCSVManager.GetCard(CardId));
+        }
+    }
+
+    // Base method to set card data (override in subclasses)
+    public virtual void InitializeCard(CardCsvData cardCsvData)
+    {
+        _data = cardCsvData;
+        CardStatus.Init(cardCsvData);
+        RefreshUI();
+    }
+
+    public virtual void RefreshUI()
+    {
+        titleText.text = _data.CardTitleId;
+        hpText.text = CardStatus.GetCurrentHP() + "/" + CardStatus.GetMaxHP();
     }
 
     // Example base update (override if needed)
