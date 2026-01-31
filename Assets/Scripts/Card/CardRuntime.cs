@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
@@ -8,7 +9,6 @@ public class CardRuntime : MonoBehaviour
 {
     // TextMeshPro components for card text (assuming world-space TextMeshPro)
     public TextMeshProUGUI titleText;
-    public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI hpText;
 
     // SpriteRenderer components for card visuals
@@ -35,7 +35,6 @@ public class CardRuntime : MonoBehaviour
 
         // Optional: Validate other components (you can assign them in the Inspector or via code in subclasses)
         if (titleText == null) Debug.LogWarning("Title TextMeshPro not assigned.");
-        if (descriptionText == null) Debug.LogWarning("Description TextMeshPro not assigned.");
         if (hpText == null) Debug.LogWarning("HP TextMeshPro not assigned.");
         if (cardImage == null) Debug.LogWarning("Card Image SpriteRenderer not assigned.");
         if (cardBorder == null) Debug.LogWarning("Card Border SpriteRenderer not assigned.");
@@ -47,7 +46,6 @@ public class CardRuntime : MonoBehaviour
     public virtual void InitializeCard(string title, string description, int hp, Sprite imageSprite, Sprite borderSprite, Sprite typeIconSprite)
     {
         if (titleText != null) titleText.text = title;
-        if (descriptionText != null) descriptionText.text = description;
         if (hpText != null) hpText.text = hp.ToString();
         if (cardImage != null) cardImage.sprite = imageSprite;
         if (cardBorder != null) cardBorder.sprite = borderSprite;
@@ -63,4 +61,5 @@ public class CardRuntime : MonoBehaviour
             // Add logic here if needed, or handle in MovementController
         }
     }
+
 }

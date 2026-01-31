@@ -64,8 +64,10 @@ public class CardCSVManager : MonoBehaviour
                     CardType = values[1].Trim(),
                     Rarity = values[2].Trim(),
                     ImageId = values[3].Trim(),
-                    CardTitleId = int.Parse(values[4]),
-                    DescriptionId = int.Parse(values[5])
+                    CardTitleId = values[4].Trim(),
+                    Description = values[5].Trim(),
+                    SourceDescription = values[6].Trim()
+
                 };
 
                 if (Cards.ContainsKey(card.CardId))

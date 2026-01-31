@@ -8,8 +8,9 @@ public class CardCsvData
     public string CardType { get; set; }      // "Monster", "Spell", "Trap", "Item", etc.
     public string Rarity { get; set; }        // "Common", "Rare", "Epic", "Legendary", "Mythic"
     public string ImageId { get; set; }       // "card_1001", "fire_dragon", or just number "017"
-    public int CardTitleId { get; set; }      // localization key (often int for I2Loc / Unity Localization)
-    public int DescriptionId { get; set; }    // localization key for description
+    public string CardTitleId { get; set; }      // localization key (often int for I2Loc / Unity Localization)
+    public string Description { get; set; }    // localization key for description
+    public string SourceDescription { get; set; }    // localization key for description
 
     // Optional: constructor for easier debugging / creation in code
     public CardCsvData()
@@ -18,8 +19,9 @@ public class CardCsvData
         CardType = "";
         Rarity = "Common";
         ImageId = "";
-        CardTitleId = 0;
-        DescriptionId = 0;
+        CardTitleId = "";
+        Description = "";
+        SourceDescription = "";
     }
 
     // Helpful for debugging

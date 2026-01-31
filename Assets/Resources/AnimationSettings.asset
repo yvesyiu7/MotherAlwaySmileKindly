@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb847b5c52a2c942b529f704d27c8d5, type: 3}
+  m_Name: AnimationSettings
+  m_EditorClassIdentifier: 
+  JumpPower: 2.5
+  NumJumps: 1
+  JumpDuration: 0.9
+  JumpEase: 6
+  UseLocalJumpByDefault: 1
+  ShakeDuration: 0.6
+  ShakeStrengthY: 45
+  ShakeVibrato: 12
+  ShakeRandomness: 40
+  ShakeFadeOut: 1
+  SqueezeDuration: 0.4
+  PunchScale: {x: 0.28, y: -0.38, z: 0.28}
+  PunchVibrato: 8
+  PunchElasticity: 0.7
+  MoveAwayOffset: {x: 0, y: 0.8, z: 2.5}
+  MoveAwayDuration: 0.7
+  ReturnDuration: 0.8
+  MoveEaseOut: 6
+  MoveEaseReturn: 7
+  PostSqueezePause: 0.1
+  FullSequenceDelay: 0.2
