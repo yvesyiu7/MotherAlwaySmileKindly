@@ -101,6 +101,29 @@ public class AnimationController : MonoBehaviour
         return seq;
     }
 
+    public Sequence MoveToAndReturn(Vector3 pos, float? awayDur = null, float? returnDur = null)
+    {
+        
+
+        Sequence seq = DOTween.Sequence();
+
+        seq.Append(
+            transform.DOMove(
+                pos,
+                awayDur ?? settings.MoveAwayDuration
+            ).SetEase(settings.MoveEaseOut)
+        );
+
+        seq.Append(
+            transform.DOMove(
+                pos,
+                returnDur ?? settings.ReturnDuration
+            ).SetEase(settings.MoveEaseReturn)
+        );
+
+        return seq;
+    }
+
     // ¢w¢w¢w Convenience: full classic combo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
     [ContextMenu("Play Full Combo")]
     public void PlayFullCombo(Vector3 jumpDestination)

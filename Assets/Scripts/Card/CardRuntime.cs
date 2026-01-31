@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
@@ -13,6 +14,7 @@ public class CardRuntime : MonoBehaviour
     // TextMeshPro components for card text (assuming world-space TextMeshPro)
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI hpText;
+    public TextMeshProUGUI effectText;
 
     // SpriteRenderer components for card visuals
     public SpriteRenderer cardImage;
@@ -27,7 +29,10 @@ public class CardRuntime : MonoBehaviour
     public Transform visualModel;
 
     // Reference to the MovementController script
-    protected MovementController movementController;
+
+    [SerializeField] protected AnimationController visualModelAnimator;
+    [SerializeField] protected MovementController movementController;
+    protected AnimationController animationController;
     protected DraggableObject draggableObject;
 
     protected virtual void Awake()
@@ -35,7 +40,9 @@ public class CardRuntime : MonoBehaviour
         // Get required components if not assigned
         rb = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
+        visualModelAnimator = visualModel.GetComponent<AnimationController>();
         movementController = GetComponent<MovementController>();
+        animationController = GetComponent<AnimationController>();
 
         // Optional: Validate other components (you can assign them in the Inspector or via code in subclasses)
         if (titleText == null) Debug.LogWarning("Title TextMeshPro not assigned.");
@@ -70,7 +77,7 @@ public class CardRuntime : MonoBehaviour
     public virtual void RefreshUI()
     {
         titleText.text = _cardCsvData.CardTitleId;
-        hpText.text = CardStatus.GetCurrentHP() + "/" + CardStatus.GetMaxHP();
+        hpText.text = CardStatus.GetCurrentHP().ToString();
         cardImage.sprite = SpriteManager.Instance.GetCardImage(_cardCsvData.ImageId);
         cardBorder.sprite = SpriteManager.Instance.GetCardBorder(_cardCsvData.Rarity);
     }
@@ -95,11 +102,18 @@ public class CardRuntime : MonoBehaviour
         switch (cardMessage.type)
         {
             case MessageType.Damage:
+                CardStatus.ReceiveMessage(cardMessage);
+                DoRed();
+                PlayEffectText(cardMessage);
+
+                break;
             case MessageType.Heal:
                 CardStatus.ReceiveMessage(cardMessage);
                 break;
             case MessageType.Destroy:
                 DestroyCard();
+                PlayEffectText(cardMessage);
+
                 break;
             default:
                 break;
@@ -112,6 +126,8 @@ public class CardRuntime : MonoBehaviour
 
     }
 
+    
+
     public virtual void On0Hp()
     {
         DestroyCard();
@@ -121,5 +137,47 @@ public class CardRuntime : MonoBehaviour
     {
         CardManager.Instance.DestroyCard(this);
 
+    }
+
+    public void DoRed()
+    {
+        cardImage.DOKill();
+        cardImage.color = Color.white;
+        cardImage.DOColor(Color.red, 0.2f)
+                   .SetLoops(2, LoopType.Yoyo);
+    }
+
+    public void PlayEffectText(CardMessage message)
+    {
+        // 1. Reset: Snap back to original position and full visibility immediately
+
+        effectText.DOKill();
+        effectText.transform.localPosition = Vector3.zero;
+        effectText.alpha = 1f;
+        switch (message.type)
+        {
+            case MessageType.Damage:
+                effectText.color = Color.red;
+                effectText.text = "-" + message.value.ToString();
+                break;
+            case MessageType.Destroy:
+                break;
+            case MessageType.Heal:
+                effectText.color = Color.green;
+                effectText.text = "+" + message.value.ToString();
+                break;
+            default:
+                break;
+        }
+
+        // 2. Animate: Create a sequence to move and fade simultaneously
+        effectText.DOFade(0f, 1.5f);
+            effectText.transform.DOLocalMoveY(50f, 0.5f).SetEase(Ease.OutExpo);
+        /*Sequence textSeq = DOTween.Sequence();
+        textSeq.Join(effectText.DOFade(0f, 1.5f));
+        // Move up by 50 units on the Y axis
+        textSeq.Join();*/
+
+        // Fade out to 0 alpha
     }
 }

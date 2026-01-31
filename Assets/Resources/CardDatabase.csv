@@ -13,7 +13,7 @@ CardId,CardType,Rarity,ImageId,CardTitleId,Description,SourcesDescription,Hp,Att
 1012,Weapon,CommonCard,Mask0,Mask0,面罩 Mask0 - 防霧，免疫污染 10 秒,家中靜止不動10秒,1,1
 1013,Weapon,CommonCard,Mask1,Mask1,高級面罩 Mask1 - 防霧，免疫污染 10 秒,合成（濾芯+膠）,1,1
 1014,Food,CommonCard,Rice,Rice,米飯 Rice - 恢復角色 20 HP,合成（藥草+膠）? / 探索（隨機）,1,1
-1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 敵人10,入侵波/屍體開包,1,1
+1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 敵人10,入侵波/屍體開包,10,1
 1016,Monster,CommonCard,PollutionFog,PollutionFog,污染霧 PollutionFog - 範圍扣 1 HP/sec,入侵波/屍體開包,1,1
 1017,Monster,CommonCard,Warlord,Warlord,軍閥 Warlord - 敵人20,入侵波/屍體開包,1,1
 1018,Food,CommonCard,CannedFood,CannedFood,罐頭 CannedFood - 恢復角色 15 HP,探索（雜貨店）,1,1

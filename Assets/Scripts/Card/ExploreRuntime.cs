@@ -20,7 +20,7 @@ public class ExploreRuntime : CardRuntime
     {
         // 1. Get a random direction on a 2D unit circle
         // Using .normalized ensures the point is on the edge, not inside
-        Vector2 randomPoint = Random.insideUnitCircle.normalized;
+        Vector2 randomPoint = Random.insideUnitCircle;
 
         // 2. Scale by radius and convert to 3D (X and Z for ground-plane, or X and Y for 2D)
         Vector3 offset = new Vector3(randomPoint.x, 0, randomPoint.y) * radius;

@@ -59,6 +59,8 @@ public class CardManager : MonoBehaviour
         return null;
     }
 
+
+
     /// <summary>
     /// Returns the list of all active CardRuntime objects in the scene.
     /// </summary>

@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+
         if (isMovingToTarget)
         {
             // Calculate direction to target
