@@ -29,6 +29,7 @@ public class CardRuntime : MonoBehaviour
 
     // Reference to the MovementController script
     protected MovementController movementController;
+    protected DraggableObject draggableObject;
 
     protected virtual void Awake()
     {
@@ -51,6 +52,7 @@ public class CardRuntime : MonoBehaviour
         if (CardId != 0) {
             InitializeCard(CardCSVManager.GetCard(CardId));
         }
+
     }
 
     // Base method to set card data (override in subclasses)
