@@ -79,4 +79,24 @@ public class CardRuntime : MonoBehaviour
         }
     }
 
+    protected virtual void SendCardMessage(CardRuntime target)
+    {
+
+    }
+
+    public virtual void ReceiveMessage(CardMessage cardMessage)
+    {
+        switch (cardMessage.type)
+        {
+            case MessageType.Damage:
+            case MessageType.Heal:
+                CardStatus.ReceiveMessage(cardMessage);
+                break;
+            case MessageType.Destroy:
+                CardManager.Instance.DestroyCard(this);
+                break;
+            default:
+                break;
+        }
+    }
 }

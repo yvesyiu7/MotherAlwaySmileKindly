@@ -63,4 +63,10 @@ public class MovementController : MonoBehaviour
         targetPosition = destination;
         isMovingToTarget = true;
     }
+
+    public void Reset()
+    {
+        isMovingToTarget = false;
+        moveDirection = Vector3.zero;
+    }
 }

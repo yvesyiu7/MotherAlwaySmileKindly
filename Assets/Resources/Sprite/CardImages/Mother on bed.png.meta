@@ -199,7 +199,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mother on bed_0: 7903038152203024715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

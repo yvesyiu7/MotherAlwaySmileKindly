@@ -199,7 +199,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Metalscraps_0: 617370256350451750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
