@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
@@ -59,7 +58,12 @@ public class CardRuntime : MonoBehaviour
     public virtual void InitializeCard(CardCsvData cardCsvData)
     {
         _cardCsvData = cardCsvData;
-        CardStatus.Init(cardCsvData);
+        CardStatus.Init(this, cardCsvData);
+        RefreshUI();
+    }
+
+    protected void OnHPChanged(int i)
+    {
         RefreshUI();
     }
 
@@ -95,10 +99,27 @@ public class CardRuntime : MonoBehaviour
                 CardStatus.ReceiveMessage(cardMessage);
                 break;
             case MessageType.Destroy:
-                CardManager.Instance.DestroyCard(this);
+                DestroyCard();
                 break;
             default:
                 break;
         }
+        RefreshUI();
+    }
+
+    public virtual void OnCollisionEnter(Collision collision)
+    {
+
+    }
+
+    public virtual void On0Hp()
+    {
+        DestroyCard();
+    }
+
+    public virtual void DestroyCard()
+    {
+        CardManager.Instance.DestroyCard(this);
+
     }
 }

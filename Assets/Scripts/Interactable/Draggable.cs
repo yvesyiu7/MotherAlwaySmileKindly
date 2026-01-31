@@ -13,13 +13,15 @@ public class DraggableObject : MonoBehaviour
     public UnityEvent OnDragEnded;
 
     private AnimationController controller;
+    protected CardRuntime cardRuntime;
 
-    private void Start()
+    private void Awake()
     {
         controller = GetComponent<AnimationController>();
+        cardRuntime = GetComponent<CardRuntime>();
     }
 
-    private void OnMouseDown()
+    protected virtual void OnMouseDown()
     {
         if (isFirstClick)
         {
@@ -38,7 +40,7 @@ public class DraggableObject : MonoBehaviour
         OnDragStarted?.Invoke();
     }
 
-    private void OnMouseDrag()
+    protected virtual void OnMouseDrag()
     {
         if (!canDrag) return;
 
@@ -48,7 +50,7 @@ public class DraggableObject : MonoBehaviour
         transform.position = new Vector3(newPos.x, transform.position.y, newPos.z);
     }
 
-    private void OnMouseUp()
+    protected virtual void OnMouseUp()
     {
 
         // Trigger the hook!

@@ -15,6 +15,8 @@ public class CardStatus
     public System.Action<int> OnLevelChanged;
     public System.Action<int> OnAttackChanged;
 
+    private CardRuntime _cardRuntime;
+
     ~CardStatus()
     {
         OnHPChanged = null;
@@ -22,8 +24,9 @@ public class CardStatus
         OnAttackChanged = null;
 
     }
-    public virtual void Init(CardCsvData cardCsvData)
+    public virtual void Init(CardRuntime cardRuntime, CardCsvData cardCsvData)
     {
+        _cardRuntime = cardRuntime;
         currentHP = cardCsvData.Hp;
         maxHP = cardCsvData.Hp;
         level = 1;
@@ -48,13 +51,14 @@ public class CardStatus
     public virtual void TakeDamage(int damageAmount)
     {
         currentHP -= damageAmount;
-        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        //currentHP = Mathf.Clamp(currentHP, 0, maxHP);
         OnHPChanged?.Invoke(currentHP);
 
         if (currentHP <= 0)
         {
             // Handle death or defeat (override in subclasses if needed)
             Debug.Log("Card defeated!");
+            _cardRuntime.On0Hp();
             // e.g., Destroy(gameObject);
         }
     }

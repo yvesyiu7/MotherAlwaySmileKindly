@@ -9,4 +9,14 @@ public class FoodRuntime : CardRuntime
 
         // Add your damage/animation logic here
     }
+
+    public override void OnCollisionEnter(Collision collision)
+    {
+        base.OnCollisionEnter(collision);
+        if (collision.gameObject.CompareTag("Character")) 
+        {
+            SendCardMessage(collision.gameObject.GetComponent<CardRuntime>());
+            CardManager.Instance.DestroyCard(this);
+        }
+    }
 }

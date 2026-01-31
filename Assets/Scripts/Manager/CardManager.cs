@@ -41,11 +41,11 @@ public class CardManager : MonoBehaviour
     /// <summary>
     /// Instantiates a card prefab by ID and adds it to the active list.
     /// </summary>
-    public CardRuntime CreateCard(int cardId, Vector3 position, Quaternion rotation)
+    public CardRuntime CreateCard(int cardId, Vector3 position)
     {
         if (prefabCache.TryGetValue(cardId, out GameObject prefab))
         {
-            GameObject newObj = Instantiate(prefab, position, rotation);
+            GameObject newObj = Instantiate(prefab, position, Quaternion.identity);
             CardRuntime runtime = newObj.GetComponent<CardRuntime>();
 
             if (runtime != null)

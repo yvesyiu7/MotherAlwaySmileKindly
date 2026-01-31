@@ -19,9 +19,9 @@ CardId,CardType,Rarity,ImageId,CardTitleId,Description,SourcesDescription,Hp,Att
 1018,Food,CommonCard,CannedFood,CannedFood,罐頭 CannedFood - 恢復角色 15 HP,探索（雜貨店）,1,1
 1019,Medical,CommonCard,Bandage,Bandage,繃帶 Bandage - 恢復角色 15 HP,探索（警署）,1,1
 1020,Resource,CommonCard,Ammo,Ammo,彈藥 Ammo - 使用遠程武器,屍體開包/探索（警署）,1,1
-1021,Explore,CommonCard,Explore1,Explore1,流浮山 Explore1 - 探索地點,起始固定,1,1
-1022,Explore,CommonCard,Explore2,Explore2,警署 Explore2 - 探索地點,起始固定,1,1
-1023,Explore,CommonCard,Explore3,Explore3,五金/雜貨 Explore3 - 探索地點,起始固定,1,1
+1021,Explore,CommonCard,Explore1,Explore1,流浮山 Explore1 - 探索地點,起始固定,10,1
+1022,Explore,CommonCard,Explore2,Explore2,警署 Explore2 - 探索地點,起始固定,10,1
+1023,Explore,CommonCard,Explore3,Explore3,五金/雜貨 Explore3 - 探索地點,起始固定,10,1
 1024,Tool,CommonCard,ChemicalReaction,ChemicalReaction,M.A.S.K. 化合合成器 ChemicalReaction - 大部份化學合成都要靠它完成,起始固定,1,1
 1025,Element,CommonCard,,Carbon,碳 (Carbon) - 基礎有機物，用於結構/燃料,探索（流浮山/餐廳）、屍體,1,1
 1026,Element,CommonCard,,Oxygen,氧 (Oxygen) - 呼吸/氧化劑，防污染必需,生產（主角）、探索（警署）,1,1
