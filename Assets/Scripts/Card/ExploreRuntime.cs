@@ -11,7 +11,8 @@ public class ExploreRuntime : CardRuntime
         foreach (var cardId in CreateCardIds)
         {
             Vector3 pos = GetRandomPositionAroundCircle(RandomNewCardOffset);
-            CardManager.Instance.CreateCard(cardId, pos);
+            var card = CardManager.Instance.CreateCard(cardId, pos);
+            card.ScaleUpFrom0();
         }
         base.On0Hp();
     }

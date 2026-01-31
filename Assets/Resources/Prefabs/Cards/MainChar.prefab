@@ -400,7 +400,7 @@ MonoBehaviour:
   visualModel: {fileID: 6013506734039421699}
   visualModelAnimator: {fileID: 0}
   movementController: {fileID: 0}
-  attackRange: 2
+  attackRange: 2.5
   attackInterval: 3
 --- !u!1 &2515675960372914100
 GameObject:
@@ -476,7 +476,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1611170455
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0, g: 1, b: 0.30129075, a: 1}
@@ -879,10 +879,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1611170455
-  m_SortingLayer: 2
+  m_SortingLayerID: -863036983
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0f66f33a04926244d9643044e3299073, type: 3}
+  m_Sprite: {fileID: -3803441764975500669, guid: fb7a72bd820d9594fa969e50264a27f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -967,9 +967,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 506691967
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bd16bc0c88aa36c45a5e219ec44def4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -977,7 +977,7 @@ SpriteRenderer:
   m_Size: {x: 1.12, y: 1.6685715}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7047986132117577048

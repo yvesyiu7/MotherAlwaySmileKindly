@@ -1,6 +1,7 @@
 // 2. ProjectileAnimator.cs  (put this on the object you want to animate)
 using UnityEngine;
 using DG.Tweening;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AnimationController : MonoBehaviour
 {
@@ -98,6 +99,14 @@ public class AnimationController : MonoBehaviour
             ).SetEase(settings.MoveEaseReturn)
         );
 
+        return seq;
+    }
+
+    public Sequence ScaleUp()
+    {
+        transform.localScale = Vector3.zero;
+        Sequence seq = DOTween.Sequence();
+        seq.Append(transform.DOScale(1,1f));
         return seq;
     }
 

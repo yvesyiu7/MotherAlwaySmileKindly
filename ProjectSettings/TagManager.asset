@@ -55,5 +55,8 @@ TagManager:
   - name: CardImage
     uniqueID: 821894123
     locked: 0
+  - name: Character
+    uniqueID: 3431930313
+    locked: 0
   m_RenderingLayers:
   - Default

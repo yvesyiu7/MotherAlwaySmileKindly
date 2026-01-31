@@ -4,6 +4,9 @@ using UnityEngine;
 public class CharacterRuntime : CardRuntime
 {
     [Header("Settings")]
+    public bool canMove = true;
+
+    [Header("Settings")]
     public float attackRange = 3f;
 
     [Header("Settings")]
@@ -52,8 +55,10 @@ public class CharacterRuntime : CardRuntime
             }
             else
             {
+                if (canMove) {
+                    movementController.MoveTo(closestTarget.transform.position);
+                }
                 // Move towards target position if out of range
-                //movementController.MoveTo(closestTarget.transform.position);
             }
         }
     }

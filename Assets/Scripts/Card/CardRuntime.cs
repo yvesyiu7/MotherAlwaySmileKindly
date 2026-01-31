@@ -51,6 +51,7 @@ public class CardRuntime : MonoBehaviour
         if (cardBorder == null) Debug.LogWarning("Card Border SpriteRenderer not assigned.");
         if (cardTypeIcon == null) Debug.LogWarning("Card Type Icon SpriteRenderer not assigned.");
         if (visualModel == null) Debug.LogWarning("Visual Model Transform not assigned.");
+        cardTypeIcon.gameObject.SetActive(false);
     }
 
     protected virtual void Start()
@@ -179,5 +180,10 @@ public class CardRuntime : MonoBehaviour
         textSeq.Join();*/
 
         // Fade out to 0 alpha
+    }
+
+    public void ScaleUpFrom0()
+    {
+        animationController.ScaleUp();
     }
 }

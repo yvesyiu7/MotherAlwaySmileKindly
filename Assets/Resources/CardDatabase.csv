@@ -1,40 +1,41 @@
 CardId,CardType,Rarity,ImageId,CardTitleId,Description,SourcesDescription,Hp,Attack
-1001,Character,CommonCard,MainChar,MainChar,主角 MainChar (HP 100，死=失敗),起始固定,100,1
-1002,Character,CommonCard,Companion1,Companion1,同伴 Companion1 (HP 50),偶遇/隨機任務報酬,50,1
-1003,Character,CommonCard,Mother,Mother,母親 Mother (HP 40),起始固定，每個月扣13血,40,1
-1004,Resource,CommonCard,Wood,Wood,木頭 Wood - 基礎原料,起始固定,1,1
-1005,Resource,CommonCard,Metals,Metals,金屬碎片 Stone - 基礎原料,起始/探索（流浮山）/生產,1,1
+1001,Character,CommonCard,MainChar,MainChar,主角 MainChar (HP 100 死=失敗) 這就是你,起始固定,100,1
+1002,Character,CommonCard,Companion1,Companion1,同伴 Companion1 (HP 50)  無主角光環 但請珍惜,偶遇/隨機任務報酬,50,1
+1003,Character,CommonCard,Mother,Mother,母親 Mother (HP 40)  通常人人都有,起始固定，每個月扣13血,40,1
+1004,Resource,CommonCard,Wood,Wood,木頭 Wood - 基礎原料 先講好這不是一種頭,起始固定,1,1
+1005,Resource,CommonCard,Metals,Metals,金屬碎片 Stone - 基礎原料 金屬的碎片是碎片的一種,起始/探索（流浮山）/生產,1,1
 1006,Resource,CommonCard,Disinfectant1,Disinfectant1,消毒劑 I Disinfectant1 - 武器原料,合成（木頭+石頭）/探索（五金）,1,1
 1007,Resource,CommonCard,Glue,Glue,膠 Glue - 萬用黏合劑、維修任何東西耐久只要夠「膠」,起始/生產（主角）/屍體,1,1
 1008,Resource,CommonCard,Antibiotics,Antibiotics,抗生素 Antibiotics - 醫療原料,探索（餐廳/流浮山）/屍體,1,1
-1009,Resource,CommonCard,Filter,Filter,濾芯 Filter - 防霧原料,探索（警署）/屍體,1,1
-1010,Weapon,CommonCard,Hkstool,Hkstool,摺凳 Hkstool - 近戰，攻擊 10,探索,1,1
-1011,Weapon,CommonCard,KitchenUtensils,KitchenUtensils,廚具 KitchenUtensils - 遠程，攻擊 2,探索隨機,1,1
-1012,Weapon,CommonCard,Mask0,Mask0,面罩 Mask0 - 防霧，免疫污染 10 秒,家中靜止不動10秒,1,1
-1013,Weapon,CommonCard,Mask1,Mask1,高級面罩 Mask1 - 防霧，免疫污染 10 秒,合成（濾芯+膠）,1,1
-1014,Food,CommonCard,Rice,Rice,米飯 Rice - 恢復角色 20 HP,合成（藥草+膠）? / 探索（隨機）,1,1
-1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 敵人10,入侵波/屍體開包,10,1
+1009,Resource,CommonCard,Filter,Filter,濾芯 Filter - 防毒霧原料 也可以用來篩走不喜歡的人,探索（警署）/屍體,1,1
+1010,Weapon,CommonCard,Hkstool,Hkstool,摺凳 Hkstool - 近戰武器    香港百大武器之首，攻擊 10,探索,1,1
+1011,Weapon,CommonCard,KitchenUtensils,KitchenUtensils,廚具 KitchenUtensils - 遠程  會用廚具的人肯定會火魔法  攻擊 2,探索隨機,1,1
+1012,Weapon,CommonCard,Mask0,Mask0,面罩 Mask0 - 防毒霧 遮醜 免疫污染 10 秒,家中靜止不動10秒,1,1
+1013,Weapon,CommonCard,Mask1,Mask1,高級面罩 Mask1 - 防霧 比原本臉孔更好看 免疫污染 10 秒,合成（濾芯+膠）,1,1
+1014,Food,CommonCard,Rice,Rice,米飯 Rice - 吃飽飯先寫到code 否則老母親也冇情講 恢復角色 20 HP,合成（藥草+膠）? / 探索（隨機）,1,1
+1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 會咬人  敵人HP10,入侵波/屍體開包,3,1
 1016,Monster,CommonCard,PollutionFog,PollutionFog,污染霧 PollutionFog - 範圍扣 1 HP/sec,入侵波/屍體開包,1,1
-1017,Monster,CommonCard,Warlord,Warlord,軍閥 Warlord - 敵人20,入侵波/屍體開包,1,1
-1018,Food,CommonCard,CannedFood,CannedFood,罐頭 CannedFood - 恢復角色 15 HP,探索（雜貨店）,1,1
+1017,Monster,CommonCard,Warlord,Warlord,喪屍軍閥 Warlord - 很凶猛的敵人HP30,入侵波/屍體開包,1,1
+1018,Food,CommonCard,CannedFood,CannedFood,罐頭 CannedFood - 可以餵貓 恢復角色 15 HP,探索（雜貨店）,1,1
 1019,Medical,CommonCard,Bandage,Bandage,繃帶 Bandage - 恢復角色 15 HP,探索（警署）,1,1
-1020,Resource,CommonCard,Ammo,Ammo,彈藥 Ammo - 使用遠程武器,屍體開包/探索（警署）,1,1
-1021,Explore,CommonCard,Explore1,Explore1,流浮山 Explore1 - 探索地點,起始固定,10,1
-1022,Explore,CommonCard,Explore2,Explore2,警署 Explore2 - 探索地點,起始固定,10,1
-1023,Explore,CommonCard,Explore3,Explore3,五金/雜貨 Explore3 - 探索地點,起始固定,10,1
-1024,Tool,CommonCard,ChemicalReaction,ChemicalReaction,M.A.S.K. 化合合成器 ChemicalReaction - 大部份化學合成都要靠它完成,起始固定,1,1
-1025,Element,CommonCard,,Carbon,碳 (Carbon) - 基礎有機物，用於結構/燃料,探索（流浮山/餐廳）、屍體,1,1
-1026,Element,CommonCard,,Oxygen,氧 (Oxygen) - 呼吸/氧化劑，防污染必需,生產（主角）、探索（警署）,1,1
-1027,Element,CommonCard,,Hydrogen,氫 (Hydrogen) - 輕質氣體，用於能量/炸藥,探索（五金）、屍體,1,1
-1028,Element,CommonCard,,Nitrogen,氮 (Nitrogen) - 穩定氣體，用於藥物/肥料,探索（餐廳）、生產,1,1
-1029,Element,CommonCard,,Iron,鐵 (Iron) - 金屬結構基礎,探索（五金）、屍體,1,1
-1030,Element,CommonCard,,Sulfur,硫 (Sulfur) - 酸性物質，用於炸藥/藥物,探索（警署）、屍體,1,1
-1031,Element,CommonCard,,Phosphorus,磷 (Phosphorus) - 發光/反應物，用於藥物,探索（流浮山）、稀有屍體,1,1
-1032,Element,CommonCard,,PenMold,青黴黴 (Penicillin Mold) - 天然抗菌黴菌,探索（餐廳）、稀有生產,1,1
-1033,Element,CommonCard,,Nitrate,硝基化合物 (Nitrate Compound) - 炸藥前體，高爆性,探索（五金）、軍閥屍體,1,1
-1034,Element,CommonCard,,ActCharcoal,活性炭 (Activated Charcoal) - 吸附劑，過濾專家,探索（警署）、霧屍體,1,1
-1035,Medical,CommonCard,,Antibiotics1,抗生素I - 基礎醫療，恢復母親/角色 HP,青黴黴 + 氮 + 氧（在合成器附近）,1,1
-1036,Medical,CommonCard,,Antibiotics2,抗生素II - 進階醫療，治重症,青黴黴 + 磷 + 氮 + 氧（在合成器附近）,1,1
-1037,Trap,CommonCard,,Bomb1,炸藥I Bomb1 - 範圍傷害 5，清怪/破壞,硝基化合物 + 硫 + 碳（在合成器附近）,1,1
-1038,Trap,CommonCard,,Bomb2,炸藥II Bomb2 - 範圍傷害 10，高爆清場,硝基化合物 + 硫 + 磷 + 氫（在合成器附近）,1,1
-1039,Tool,CommonCard,,Lengendarycooker,廚具 (自動產米飯) - 每 10 秒 +5 HP，持續食物生產,鐵 + 碳 + 氧（在合成器附近）,1,1
+1020,Resource,CommonCard,Ammo,Ammo,彈藥 Ammo - 作為一種治療武器的藥物 有了它才能使用遠程武器,屍體開包/探索（警署）,1,1
+1021,Explore,CommonCard,Explore1,Explore1,流浮山 Explore1 -  據說有大量流浮山刀手 探索地點,起始固定,3,1
+1022,Explore,CommonCard,Explore2,Explore2,警署 Explore2 - 不知道為什麼山上有警署 探索地點,起始固定,3,1
+1023,Explore,CommonCard,Explore3,Explore3,五金/雜貨 Explore3 - 唯獨沒有金的 探索地點,起始固定,3,1
+1024,Tool,CommonCard,ChemicalReaction,ChemicalReaction,M.A.S.K. 化合合成器 ChemicalReaction - 本遊戲中大部份化學合成都要靠它完成 前提是遊戲能完成的話,起始固定,3,1
+1025,Element,CommonCard,Carbon,Carbon,碳 (Carbon) - 基礎有機物  用於結構/燃料 煉炭原料,探索（流浮山/餐廳）、屍體,1,1
+1026,Element,CommonCard,Oxygen,Oxygen,氧 (Oxygen) - 呼吸/氧化劑  人類生存必備,生產（主角）、探索（警署）,1,1
+1027,Element,CommonCard,Hydrogen,Hydrogen,氫 (Hydrogen) - 輕質氣體  用於能量/炸藥,探索（五金）、屍體,1,1
+1028,Element,CommonCard,Nitrogen,Nitrogen,氮 (Nitrogen) - 穩定氣體 用於藥物/肥料 ,探索（餐廳）、生產,1,1
+1029,Element,CommonCard,Iron,Iron,鐵 (Iron) - 金屬結構基礎 也是煉鋼原料,探索（五金）、屍體,1,1
+1030,Element,CommonCard,Sulfur,Sulfur,硫 (Sulfur) - 酸性物質 用於炸藥/藥物,探索（警署）、屍體,1,1
+1031,Element,CommonCard,Phosphorus,Phosphorus,磷 (Phosphorus) - 發光/反應物  用於藥物 也可以用來發光,探索（流浮山）、稀有屍體,1,1
+1032,Element,CommonCard,PenMold,PenMold,青黴黴 (Penicillin Mold) - 天然抗菌黴菌,探索（餐廳）、稀有生產,1,1
+1033,Element,CommonCard,Nitrate,Nitrate,硝基化合物 (Nitrate Compound) - 炸藥前體  高爆性,探索（五金）、軍閥屍體,1,1
+1034,Element,CommonCard,ActCharcoal,ActCharcoal,活性炭 (Activated Charcoal) - 吸附劑  過濾專家,探索（警署）、霧屍體,1,1
+1035,Medical,CommonCard,Antibiotics1,Antibiotics1,抗生素I - 基礎醫療  恢復母親/角色 HP,青黴黴 + 氮 + 氧（在合成器附近）,1,1
+1036,Medical,CommonCard,Antibiotics2,Antibiotics2,抗生素II - 進階醫療  治重症 反正比I厲害,青黴黴 + 磷 + 氮 + 氧（在合成器附近）,1,1
+1037,Trap,CommonCard,Bomb1,Bomb1,炸藥I Bomb1 - 範圍傷害 5  清怪/破壞,硝基化合物 + 硫 + 碳（在合成器附近）,1,1
+1038,Trap,CommonCard,Bomb2,Bomb2,炸藥II Bomb2 - 範圍傷害 15  高爆清場 可能是一種藝術,硝基化合物 + 硫 + 磷 + 氫（在合成器附近）,1,1
+1039,Tool,CommonCard,Lengendarycooker,Lengendarycooker,廚具 (自動產米飯) - 每 10 秒 +5 HP   持續食物生產,鐵 + 碳 + 氧（在合成器附近）,1,1
+1040,Resource,CommonCard,Pet,Pet,罐頭 CannedFood - 可以餵貓 恢復角色 15 HP,探索（雜貨店）,1,1
