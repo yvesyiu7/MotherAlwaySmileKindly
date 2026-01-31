@@ -15,6 +15,13 @@ public class CardStatus
     public System.Action<int> OnLevelChanged;
     public System.Action<int> OnAttackChanged;
 
+    ~CardStatus()
+    {
+        OnHPChanged = null;
+        OnLevelChanged = null;
+        OnAttackChanged = null;
+
+    }
     public virtual void Init(CardCsvData cardCsvData)
     {
         currentHP = cardCsvData.Hp;
