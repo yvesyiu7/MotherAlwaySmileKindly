@@ -339,6 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e867402dae1c0d340ae9a6825ff37b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardId: 0
+  CardStatus:
+    currentHP: 0
+    maxHP: 0
+    level: 0
+    attack: 0
   titleText: {fileID: 6382962937837656639}
   hpText: {fileID: 8935158007683709738}
   cardImage: {fileID: 1665356338385356053}
@@ -937,7 +943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cardname
+  m_text: MainChar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a270ec9b75b332e418bb8d66a0ef4b25, type: 2}
   m_sharedMaterial: {fileID: -6133743001890577773, guid: a270ec9b75b332e418bb8d66a0ef4b25, type: 2}
@@ -964,11 +970,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 15.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 5
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -980,7 +986,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 2
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

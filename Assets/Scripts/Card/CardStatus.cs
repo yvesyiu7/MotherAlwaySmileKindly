@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Serializable]
 public class CardStatus
 {
     // Core parameters for the card status
@@ -13,12 +15,16 @@ public class CardStatus
     public System.Action<int> OnLevelChanged;
     public System.Action<int> OnAttackChanged;
 
-    protected virtual void Init(CardCsvData cardCsvData)
+    public virtual void Init(CardCsvData cardCsvData)
     {
-        
+        currentHP = cardCsvData.Hp;
+        maxHP = cardCsvData.Hp;
+        level = 1;
+        attack = cardCsvData.Attack;
     }
 
     // Method to initialize status (call from CardRuntime or subclass)
+
     public virtual void InitializeStatus(int initialMaxHP, int initialLevel, int initialAttack)
     {
         maxHP = initialMaxHP;
