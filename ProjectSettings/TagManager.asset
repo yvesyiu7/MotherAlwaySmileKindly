@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Character
   - Enemy
+  - Heal
+  - Wood
+  - Metals
+  - Hkstool
+  - KitchenUtensils
   layers:
   - Default
   - TransparentFX

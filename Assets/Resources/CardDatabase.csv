@@ -1,5 +1,5 @@
 CardId,CardType,Rarity,ImageId,CardTitleId,Description,SourcesDescription,Hp,Attack
-1001,Character,CommonCard,MainChar,MainChar,主角 MainChar (HP 100 死=失敗) 這就是你,起始固定,100,1
+1001,Character,CommonCard,MainChar,MainChar,主角 MainChar (HP 100 死=失敗) 這就是你,起始固定,100,5
 1002,Character,CommonCard,Companion1,Companion1,同伴 Companion1 (HP 50)  無主角光環 但請珍惜,偶遇/隨機任務報酬,50,1
 1003,Character,CommonCard,Mother,Mother,母親 Mother (HP 40)  通常人人都有,起始固定，每個月扣13血,40,1
 1004,Resource,CommonCard,Wood,Wood,木頭 Wood - 基礎原料 先講好這不是一種頭,起始固定,1,1
@@ -13,12 +13,12 @@ CardId,CardType,Rarity,ImageId,CardTitleId,Description,SourcesDescription,Hp,Att
 1012,Weapon,CommonCard,Mask0,Mask0,面罩 Mask0 - 防毒霧 遮醜 免疫污染 10 秒,家中靜止不動10秒,1,1
 1013,Weapon,CommonCard,Mask1,Mask1,高級面罩 Mask1 - 防霧 比原本臉孔更好看 免疫污染 10 秒,合成（濾芯+膠）,1,1
 1014,Food,CommonCard,Rice,Rice,米飯 Rice - 吃飽飯先寫到code 否則老母親也冇情講 恢復角色 20 HP,合成（藥草+膠）? / 探索（隨機）,1,1
-1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 會咬人  敵人HP10,入侵波/屍體開包,3,1
+1015,Monster,CommonCard,Zombie,Zombie,喪屍 Zombie - 會咬人  敵人HP10,入侵波/屍體開包,10,5
 1016,Monster,CommonCard,PollutionFog,PollutionFog,污染霧 PollutionFog - 範圍扣 1 HP/sec,入侵波/屍體開包,1,1
 1017,Monster,CommonCard,Warlord,Warlord,喪屍軍閥 Warlord - 很凶猛的敵人HP30,入侵波/屍體開包,1,1
 1018,Food,CommonCard,CannedFood,CannedFood,罐頭 CannedFood - 可以餵貓 恢復角色 15 HP,探索（雜貨店）,1,1
 1019,Medical,CommonCard,Bandage,Bandage,繃帶 Bandage - 恢復角色 15 HP,探索（警署）,1,1
-1020,Resource,CommonCard,Ammo,Ammo,彈藥 Ammo - 作為一種治療武器的藥物 有了它才能使用遠程武器,屍體開包/探索（警署）,1,1
+1020,Resource,CommonCard,Bandage,Bandage,彈藥 Ammo - 作為一種治療武器的藥物 有了它才能使用遠程武器,屍體開包/探索（警署）,1,1
 1021,Explore,CommonCard,Explore1,Explore1,流浮山 Explore1 -  據說有大量流浮山刀手 探索地點,起始固定,3,1
 1022,Explore,CommonCard,Explore2,Explore2,警署 Explore2 - 不知道為什麼山上有警署 探索地點,起始固定,3,1
 1023,Explore,CommonCard,Explore3,Explore3,五金/雜貨 Explore3 - 唯獨沒有金的 探索地點,起始固定,3,1

@@ -124,10 +124,34 @@ public class CardRuntime : MonoBehaviour
 
     public virtual void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Heal"))
+        {
+            CardRuntime card = collision.gameObject.GetComponent<CardRuntime>();
+            CardMessage cardMessage = new CardMessage(MessageType.Heal, 5);
+            PlayEffectText(cardMessage);
+            ReceiveMessage(cardMessage);
+            CardManager.Instance.DestroyCard(card);
+        }
 
+        if (collision.gameObject.CompareTag("Metals"))
+        {
+            
+            CardManager.Instance.DestroyCard(this);
+            
+        }
+        if (collision.gameObject.CompareTag("KitchenUtensils"))
+        {
+            CardManager.Instance.DestroyCard(this);
+            var card = CardManager.Instance.CreateCard(1011, transform.position);
+            card.ScaleUpFrom0();
+        }
+        if (collision.gameObject.CompareTag("Hkstool"))
+        {
+            CardManager.Instance.DestroyCard(this);
+            var card = CardManager.Instance.CreateCard(1010, transform.position);
+            card.ScaleUpFrom0();
+        }
     }
-
-    
 
     public virtual void On0Hp()
     {
@@ -186,4 +210,6 @@ public class CardRuntime : MonoBehaviour
     {
         animationController.ScaleUp();
     }
+
+
 }

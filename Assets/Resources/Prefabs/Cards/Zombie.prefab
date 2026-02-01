@@ -352,7 +352,7 @@ MonoBehaviour:
   visualModelAnimator: {fileID: 0}
   movementController: {fileID: 0}
   attackRange: 2
-  attackInterval: 4
+  attackInterval: 1.5
 --- !u!1 &4423007724985521952
 GameObject:
   m_ObjectHideFlags: 0
