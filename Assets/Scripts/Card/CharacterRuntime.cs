@@ -11,6 +11,8 @@ public class CharacterRuntime : CardRuntime
 
     [Header("Settings")]
     public float attackInterval = 2f;
+    [Header("Settings")]
+    public AudioSource HurtSound;
 
     protected float nextAttackTime = 0;
 
@@ -75,6 +77,10 @@ public class CharacterRuntime : CardRuntime
         movementController.Reset();
         animationController.MoveToAndReturn(closestTarget.transform.position);
         SendCardMessage(closestTarget);
-
+        if (HurtSound != null)
+        {
+            HurtSound.Play();
+        }
+            
     }
 }

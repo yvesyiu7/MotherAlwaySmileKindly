@@ -24,6 +24,7 @@ public class CardRuntime : MonoBehaviour
     // Physics components (required)
     protected Rigidbody rb;
     protected BoxCollider boxCollider;
+    [SerializeField] protected AudioSource hitSound;
 
     // Transform for the visual model (e.g., a child object holding visuals)
     public Transform visualModel;
@@ -106,7 +107,10 @@ public class CardRuntime : MonoBehaviour
                 CardStatus.ReceiveMessage(cardMessage);
                 DoRed();
                 PlayEffectText(cardMessage);
-
+                if(hitSound != null)
+                {
+                    hitSound.Play();
+                }
                 break;
             case MessageType.Heal:
                 CardStatus.ReceiveMessage(cardMessage);
